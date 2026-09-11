@@ -1,9 +1,9 @@
-import logo from "../../assets/images/logo.svg";
+import { logo } from "../../assets/images";
 
 function Logo() {
   return (
     <div>
-      <img src={logo} alt="Logo"  />
+      <img src={logo} alt="Logo" />
     </div>
   );
 }

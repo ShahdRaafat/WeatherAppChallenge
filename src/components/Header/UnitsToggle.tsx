@@ -1,5 +1,4 @@
-import unitsIcon from "../../assets/images/icon-units.svg";
-import dropdownIcon from "../../assets/images/icon-dropdown.svg";
+import { dropdownIcon, unitsIcon } from "../../assets/images";
 import { useState } from "react";
 import { UnitsDropdownPanel } from "./UnitsDropdownPanel";
 

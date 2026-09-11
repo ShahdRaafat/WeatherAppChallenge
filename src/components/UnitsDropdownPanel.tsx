@@ -1,10 +1,10 @@
-import { checkmarkIcon } from "../../assets/images";
-import type { UnitOption } from "../../types/unit";
+import { checkmarkIcon } from "../assets/images";
+import type { UnitOption } from "../types/unit";
 import {
   temperatureOptions,
   windSpeedOptions,
   precipitationOptions,
-} from "../../constants/unitOptions";
+} from "../constants/unitOptions";
 
 interface UnitsDropdownPanelProps {
   temperature: string;
@@ -14,7 +14,6 @@ interface UnitsDropdownPanelProps {
   onSelectWindSpeed: (value: string) => void;
   onSelectPrecipitation: (value: string) => void;
 }
-
 function UnitsDropdownPanel({
   temperature,
   windSpeed,
@@ -23,17 +22,9 @@ function UnitsDropdownPanel({
   onSelectWindSpeed,
   onSelectPrecipitation,
 }: UnitsDropdownPanelProps) {
-  function switchToImperial() {
-    onSelectTemperature("fahrenheit");
-    onSelectWindSpeed("mph");
-    onSelectPrecipitation("in");
-  }
   return (
     <div className="bg-neutral-600/80 p-2 rounded-md absolute right-0 top-full mt-2 w-48 z-10 ">
-      <button
-        onClick={switchToImperial}
-        className="w-full text-left text-sm text-white hover:bg-neutral-600/50 p-1 rounded-md pb-2 mb-1"
-      >
+      <button className="w-full text-left text-sm text-white hover:bg-neutral-700 p-1 rounded-md pb-2 mb-1">
         Switch to Imperial
       </button>
       <div className="divide-y divide-neutral-300">
@@ -78,7 +69,7 @@ function MenuItem({
       {options.map((option) => (
         <button
           key={option.value}
-          className={`w-full text-left text-sm text-white ${selected === option.value ? "bg-neutral-600/60" : ""} hover:bg-neutral-600/60 p-1 rounded-md flex items-center justify-between`}
+          className={`w-full text-left text-sm text-white ${selected === option.value ? "bg-neutral-700" : ""} hover:bg-neutral-700 p-1 rounded-md flex items-center justify-between`}
           onClick={() => onSelect(option.value)}
         >
           {option.label}
