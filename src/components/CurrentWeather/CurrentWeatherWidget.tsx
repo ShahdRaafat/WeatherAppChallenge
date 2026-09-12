@@ -3,7 +3,7 @@ import { sunnyIcon } from "../../assets/images";
 function CurrentWeather() {
   return (
     <div
-      className="relative  mt-8 flex items-center justify-between bg-cover  bg-center  py-4 px-6  min-h-56 rounded-xl text-white mb-8"
+      className="relative   flex items-center justify-between bg-cover  bg-center  py-4 px-6  min-h-56 rounded-xl text-white mb-8"
       style={{ backgroundImage: `url(${todayBackground})` }}
     >
       <div>
