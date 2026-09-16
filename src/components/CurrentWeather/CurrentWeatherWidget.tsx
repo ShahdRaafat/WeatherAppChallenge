@@ -1,6 +1,11 @@
 import { todayBackground } from "../../assets/images";
 import { sunnyIcon } from "../../assets/images";
+import { useLocation } from "../../context/LocationContext";
+import { useGeocoding } from "../../hooks/useGeocoding";
 function CurrentWeather() {
+  const { location } = useLocation();
+  const { data, error, isLoading } = useGeocoding(location);
+  console.log(data, error, isLoading);
   return (
     <div
       className="relative   flex items-center justify-between bg-cover  bg-center  py-4 px-6  min-h-56 rounded-xl text-white mb-8"
