@@ -1,6 +1,6 @@
 interface WeatherDetailsCardProps {
   title: string;
-  value: string;
+  value: number;
 }
 
 function WeatherDetailsCard({ title, value }: WeatherDetailsCardProps) {

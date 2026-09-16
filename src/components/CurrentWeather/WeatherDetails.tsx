@@ -1,12 +1,24 @@
+import type { currentWeatherType } from "../../types/currentWeather";
 import WeatherDetailsCard from "./WeatherDetailsCard";
 
-function WeatherDetails() {
+interface WeatherDetailsProps {
+  current: currentWeatherType;
+  loading: boolean;
+}
+
+function WeatherDetails({ current, loading }: WeatherDetailsProps) {
+  const {
+    apparent_temperature: feelsLike,
+    relative_humidity_2m: humidity,
+    wind_speed_10m: windSpeed,
+    precipitation_probability: precipitation,
+  } = current || {};
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-white mb-8">
-      <WeatherDetailsCard title="Feels Like" value="23°" />
-      <WeatherDetailsCard title="Humidity" value="65%" />
-      <WeatherDetailsCard title="Wind" value="10 km/h" />
-      <WeatherDetailsCard title="Precipitation" value="0 mm" />
+      <WeatherDetailsCard title="Feels Like" value={feelsLike} />
+      <WeatherDetailsCard title="Humidity" value={humidity} />
+      <WeatherDetailsCard title="Wind" value={windSpeed} />
+      <WeatherDetailsCard title="Precipitation" value={precipitation} />
     </div>
   );
 }
