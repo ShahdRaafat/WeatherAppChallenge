@@ -8,7 +8,7 @@ const LocationContext = createContext<LocationContextType | undefined>(
   undefined,
 );
 export function LocationProvider({ children }: { children: ReactNode }) {
-  const [location, setLocation] = useState("");
+  const [location, setLocation] = useState("Berlin");
   return (
     <LocationContext.Provider value={{ location, setLocation }}>
       {children}

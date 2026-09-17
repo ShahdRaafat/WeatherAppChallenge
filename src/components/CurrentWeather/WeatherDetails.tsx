@@ -15,7 +15,7 @@ function WeatherDetails({ current, loading }: WeatherDetailsProps) {
   } = current || {};
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-white mb-8">
-      <WeatherDetailsCard title="Feels Like" value={feelsLike} />
+      <WeatherDetailsCard title="Feels Like" value={feelsLike?.toFixed(0)} />
       <WeatherDetailsCard title="Humidity" value={humidity} />
       <WeatherDetailsCard title="Wind" value={windSpeed} />
       <WeatherDetailsCard title="Precipitation" value={precipitation} />

@@ -26,7 +26,7 @@ function CurrentWeather({ city, country, current }: CurrentWeatherProps) {
       </div>
       <div className="flex  items-center gap-4">
         <img src={sunnyIcon} alt="Sunny" className="h-20 w-20" />
-        <h3 className="text-7xl font-bold">{temperature}°</h3>
+        <h3 className="text-7xl font-bold">{temperature?.toFixed(0)}°</h3>
       </div>
     </div>
   );

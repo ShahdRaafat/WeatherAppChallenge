@@ -10,7 +10,12 @@ function WholeApp() {
   const { data: geocodingData, error, isLoading } = useGeocoding(location);
   const { latitude, longitude, name, country } = geocodingData || {};
   if (error) {
-    return <Error />;
+    return (
+      <div className="min-h-screen bg-neutral-900 py-10 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64">
+        <Header />
+        <Error />;
+      </div>
+    );
   }
   return (
     <main className="min-h-screen bg-neutral-900 py-10 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64">
